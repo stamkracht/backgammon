@@ -7,40 +7,17 @@
 <body ng-controller="MainCtrl">
 
   <section class="c-board">
-    <article class="c-quadrant c-quadrant--outer-board">
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-    </article>
-
-    <article class="c-quadrant c-quadrant--home-board">
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-      <div class="c-point c-point--down"></div>
-    </article>
-
-    <article class="c-quadrant c-quadrant--outer-board">
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
-    </article>
-
-    <article class="c-quadrant c-quadrant--home-board">
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
-      <div class="c-point c-point--up"></div>
+    <article class="c-quadrant c-quadrant--outer-board"
+      ng-repeat="quadrant in 'quad'">
+      <div class="c-point"
+        ng-class="$parent.$index < 2 ? 'c-point--down' : 'c-point--up'"
+        ng-repeat="point in 'points' track by $index">
+        <div class="c-stone"
+          ng-repeat="stone in stones | filter:{position: $index} track by $index"
+          ng-if="stone.position === $parent.$index"
+          ng-class="stone.player === 'white' ? 'c-stone--white' : 'c-stone--black'"
+          ng-style="$parent.$parent.$parent.$index < 2 && {'top': ($index * 15 + 1) + '%'} || {'bottom': ($index * 15 + 1) + '%'}"></div>
+      </div>
     </article>
   </section>
 
