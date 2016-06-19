@@ -25,7 +25,9 @@
 @import 'base.grouping-content.scss';
 
 
-// @import 'components.[name].scss';
+@import 'components.board.scss'; 
+@import 'components.quadrant.scss'; 
+@import 'components.point.scss'; 
 
 
 // @import 'utilities.[name].scss';

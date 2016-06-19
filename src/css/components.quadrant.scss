@@ -1,0 +1,10 @@
+.c-quadrant {
+  display: inline-block;
+  width: 45%;
+  
+  &:nth-child(1n+3) { align-self: flex-end; }
+}
+
+
+// .c-quadrant--home-board { }
+// .c-quadrant--outer-board { }

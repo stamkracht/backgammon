@@ -1,0 +1,60 @@
+// Point
+//
+// .c-point--up     - point up.
+// .c-point--down   - point down.
+//
+// Markup:
+//<div class="c-point {{modifier_class}}"></div>
+//
+// Styleguide Components.Point
+
+
+.c-point {
+  overflow: hidden;
+  display: inline-block;
+  margin-right: -4px;
+  width: 16.66667%;
+  height: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+  }
+
+  .c-quadrant & { overflow: initial; }
+}
+
+
+// point up.
+.c-point--up {
+  padding-left: 8.33333%;
+  padding-bottom: 50%;
+
+  &:after {
+    margin-left: -500px;
+    border-left: 500px solid transparent;
+    border-right: 500px solid transparent;
+    border-bottom: 3000px solid $black;
+  }
+
+  &:nth-child(2n+1):after { border-bottom-color: red; }
+}
+
+
+// point down.
+.c-point--down {
+  padding-left: 8.33333%;
+  padding-top: 50%;
+
+  &:after {
+    margin-left: -500px;
+    margin-top: -3000px;
+    border-left: 500px solid transparent;
+    border-right: 500px solid transparent;
+    border-top: 3000px solid $black;
+  }
+
+  &:nth-child(2n+0):after { border-top-color: red; }
+}
