@@ -1,6 +1,10 @@
 # Backgammon
 
-Minimalistic backgammon board setup game for recreational purposes.
+Minimalistic backgammon boardgame setup for recreational purposes.
+
+## Demo
+
+[Demo](https://rawgit.com/stamkracht/backgammon/master/)
 
 ## Dependencies
 
