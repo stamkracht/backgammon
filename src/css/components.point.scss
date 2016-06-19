@@ -47,7 +47,7 @@
     border-bottom: 3000px solid $black;
   }
 
-  &:nth-child(2n+1):after { border-bottom-color: red; }
+  &:nth-child(2n+0):after { border-bottom-color: red; }
 }
 
 
