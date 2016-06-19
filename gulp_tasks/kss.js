@@ -17,7 +17,7 @@ module.exports = function (gulp) {
   gulp.task('kss', config.plugins.shell.task([
 
     'kss --config kss-config.json',
-    open + ' kss_styleguide/styleguide/index.html'
+    open + ' kss_styleguide/index.html'
 
   ]));
 
