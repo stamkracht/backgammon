@@ -1,0 +1,22 @@
+{
+  "name": "backgammon",
+  "version": "0.0.1",
+  "description": "Minimalistic backgammon board setup game for recreational purposes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stamkracht/backgammon.git"
+  },
+  "keywords": [
+    "backgammon"
+  ],
+  "author": "Stamkracht",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stamkracht/backgammon/issues"
+  },
+  "homepage": "https://github.com/stamkracht/backgammon#readme"
+}
