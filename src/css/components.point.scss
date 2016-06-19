@@ -42,7 +42,7 @@
     margin-left: -500px;
     border-left: 500px solid transparent;
     border-right: 500px solid transparent;
-    border-bottom: 3000px solid #dedede;
+    border-bottom: 3000px solid #555555;
   }
 
   &:nth-child(2n+0):after { border-bottom-color: #cd2327; }
@@ -59,7 +59,7 @@
     margin-top: -3000px;
     border-left: 500px solid transparent;
     border-right: 500px solid transparent;
-    border-top: 3000px solid #dedede;
+    border-top: 3000px solid #555555;
   }
 
   &:nth-child(2n+0):after { border-top-color: #cd2327; }
