@@ -1,12 +1,23 @@
+// require gulp.
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var cssnano = require('gulp-cssnano');
- 
-gulp.task('build', function () {
-  gulp.src('src/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist'));
-  gulp.src('src/*.css')
-    .pipe(cssnano())
-    .pipe(gulp.dest('./dist'));
+
+
+// task for development.
+gulp.task('default', ['css', 'js'], function () {
+  gulp.start('watch');
 });
+
+
+// utility function that gets task modules.
+function task(task){
+  return require('./gulp_tasks/' + task)(gulp);
+}
+
+
+// all task modules.
+task('clean');
+task('css');
+task('js');
+task('kss');
+task('browsersync');
+task('watch');
