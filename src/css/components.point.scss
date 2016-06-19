@@ -10,6 +10,7 @@
 
 
 .c-point {
+  position: relative;
   overflow: hidden;
   display: inline-block;
   margin-right: -4px;
@@ -24,6 +25,13 @@
   }
 
   .c-quadrant & { overflow: initial; }
+
+  .c-stone {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 25%;
+  }
 }
 
 
