@@ -1,0 +1,36 @@
+.c-box-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  border-left: 15px solid #dedede;
+
+  .c-box {
+    padding-top: 15%;
+
+    .c-stone {
+      width: 80%;
+      height: 6%;
+      margin: -5% auto;
+      transform: rotate(180deg);
+    }
+
+    &--black {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 50%;
+    }
+
+    &--white {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: rotate(180deg);
+    }
+  }
+}
