@@ -7,7 +7,8 @@
 <body ng-controller="MainCtrl">
 
   <section class="c-board">
-    <article class="c-quadrant c-quadrant--outer-board"
+    <article class="c-quadrant"
+      ng-class="$index % 2 ? 'c-quadrant--home-board' : 'c-quadrant--outer-board'"
       ng-repeat="quadrant in 'quad'">
       <div class="c-point"
         ng-class="$parent.$index < 2 ? 'c-point--down' : 'c-point--up'"
