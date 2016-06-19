@@ -3,6 +3,7 @@
 *.sassc
 *.db
 .sass-cache/*
+dest/*
 media/*
 static/*
 logs/*
