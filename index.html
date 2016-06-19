@@ -15,6 +15,7 @@
         ng-repeat="point in 'points' track by $index">
         <div class="c-stone"
           ng-repeat="stone in stones | filter:{position: $index + ($parent.$index * 6) + 1} track by $index"
+          ng-click="stone.position = 25"
           ng-if="stone.position === $parent.$index  + ($parent.$parent.$index * 6) + 1"
           ng-class="stone.player === 'white' ? 'c-stone--white' : 'c-stone--black'"
           ng-style="$parent.$parent.$parent.$index < 2 && {'top': ($index * 15 + 1) + '%'} || {'bottom': ($index * 15 + 1) + '%'}"></div>
