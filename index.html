@@ -8,10 +8,10 @@
 
   <div class="c-box-container">
     <div class="c-box c-box--black">
-      <div class="c-stone c-stone--black"></div>
+      <div class="c-stone c-stone--black" ng-repeat="stone in stones" ng-if="stone.player === 'black' && stone.position === 25"></div>
     </div>
     <div class="c-box c-box--white">
-      <div class="c-stone c-stone--white"></div>
+      <div class="c-stone c-stone--white" ng-repeat="stone in stones" ng-if="stone.player === 'white' && stone.position === 25"></div>
     </div>
   </div>
 
