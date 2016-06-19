@@ -23,7 +23,7 @@
     </article>
   </section>
 
-  <div class="c-box-container">
+  <div class="c-box-container" ng-click="moveStone(25)">
     <div class="c-box c-box--black">
       <div class="c-stone c-stone--black" ng-repeat="stone in stones" ng-if="stone.player === 'black' && stone.position === 25"></div>
     </div>
