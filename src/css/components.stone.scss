@@ -3,6 +3,9 @@
   width: 100px;
   height: 90px;
   border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 
   &--white {
     background: #fff;
