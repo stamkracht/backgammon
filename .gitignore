@@ -16,7 +16,7 @@ logs/*
 node_modules
 bower_components
 tmp
-global_static/california/kss_styleguide/
+kss_styleguide
 
 
 # OS generated files. #
