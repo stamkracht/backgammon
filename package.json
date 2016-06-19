@@ -1,7 +1,7 @@
 {
   "name": "backgammon",
   "version": "0.0.1",
-  "description": "Minimalistic backgammon board setup game for recreational purposes.",
+  "description": "Minimalistic backgammon boardgame setup for recreational purposes.",
   "main": "index.js",
   "scripts": {
     "test": "gulp"

@@ -1,6 +1,6 @@
 # Backgammon
 
-Minimalistic backgammon board setup game for recreational purposes.
+Minimalistic backgammon boardgame setup for recreational purposes.
 
 ## Dependencies
 
