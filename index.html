@@ -11,11 +11,11 @@
       ng-class="$index < 1 || $index > 2 ? 'c-quadrant--home-board' : 'c-quadrant--outer-board'"
       ng-repeat="quadrant in 'quad'">
       <div class="c-point"
+        ng-click="moveStone($index + ($parent.$index * 6) + 1)"
         ng-class="$parent.$index < 2 ? 'c-point--down' : 'c-point--up'"
         ng-repeat="point in 'points' track by $index">
-        <div class="c-stone"
+        <div class="c-stone {{ active_stone === stone ? 'state-active' : ''}}"
           ng-repeat="stone in stones | filter:{position: $index + ($parent.$index * 6) + 1} track by $index"
-          ng-click="stone.position = 25"
           ng-if="stone.position === $parent.$index  + ($parent.$parent.$index * 6) + 1"
           ng-class="stone.player === 'white' ? 'c-stone--white' : 'c-stone--black'"
           ng-style="$parent.$parent.$parent.$index < 2 && {'top': ($index * 15 + 1) + '%'} || {'bottom': ($index * 15 + 1) + '%'}"></div>

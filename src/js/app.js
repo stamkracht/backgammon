@@ -124,5 +124,19 @@ angular.module('sk.backgammon', [])
         player: 'black'
       },
     ];
+
+    $scope.moveStone = function (position) {
+      if ( $scope.active_stone ) {
+        $scope.active_stone.position = position;
+        $scope.active_stone.active = false;
+        $scope.active_stone = undefined;
+      } else {
+        angular.forEach($scope.stones, function (stone) {
+          if ( stone.position === position ) {
+            $scope.active_stone = stone;
+          }
+        });
+      }
+    };
   }]);
 
