@@ -11,11 +11,27 @@
 
 .c-point {
   position: relative;
-  overflow: hidden;
-  display: inline-block;
+  display: block;
   width: 16.66667%;
-  height: 0;
+  height: 100%;
   cursor: pointer;
+
+  .c-stone {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 20%;
+  }
+}
+
+.c-point__shape {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 0;
 
   &:after {
     content: '';
@@ -23,20 +39,14 @@
     width: 0;
     height: 0;
   }
-
-  .c-stone {
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    height: 25%;
-  }
 }
 
 
 // point up.
-.c-point--up {
-  padding-left: 8.33333%;
-  padding-bottom: 50%;
+.c-point--up .c-point__shape {
+  bottom: 0;
+  padding-left: 50%;
+  padding-bottom: 300%;
 
   &:after {
     margin-left: -500px;
@@ -44,15 +54,16 @@
     border-right: 500px solid transparent;
     border-bottom: 3000px solid #555555;
   }
-
-  &:nth-child(2n+0):after { border-bottom-color: #cd2327; }
 }
+
+.c-point--up:nth-child(2n+0) .c-point__shape:after { border-bottom-color: #cd2327; }
 
 
 // point down.
-.c-point--down {
-  padding-left: 8.33333%;
-  padding-top: 50%;
+.c-point--down .c-point__shape {
+  top: 0;
+  padding-left: 50%;
+  padding-top: 300%;
 
   &:after {
     margin-left: -500px;
@@ -62,5 +73,6 @@
     border-top: 3000px solid #555555;
   }
 
-  &:nth-child(2n+0):after { border-top-color: #cd2327; }
 }
+
+.c-point--down:nth-child(2n+0) .c-point__shape:after { border-top-color: #cd2327; }
