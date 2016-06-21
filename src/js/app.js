@@ -130,12 +130,12 @@ angular.module('sk.backgammon', [])
         return stone.position === position;
       });
       if ( $scope.active_stone ) {
-        if ( _stones.length < 2 ) {
+        if ( _stones.length < 2 && position !== 25 ) {
           $scope.active_stone.position = position;
           if ( _stones.length === 1 && _stones[0].player !== $scope.active_stone.player ) {
             _stones[0].position = -1;
           }
-        } else if ( $scope.active_stone.player === _stones[0].player ) {
+        } else if ( (_stones.length && $scope.active_stone.player === _stones[0].player) || position === 25 ) {
           $scope.active_stone.position = position;
         }
         $scope.active_stone.active = false;
