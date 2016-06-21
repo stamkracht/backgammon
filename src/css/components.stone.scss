@@ -27,13 +27,17 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: #cd2327;
-    animation: neon 1.5s ease-in-out infinite alternate;
+    background: rgba(205, 35, 39, 0.75);
+    animation: neon 1s ease-in-out infinite alternate;
   }
 }
 
 @keyframes neon {
-  from { box-shadow: 0 0 10px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px #cd2327, 0 0 70px #cd2327, 0 0 80px #cd2327, 0 0 100px #cd2327, 0 0 150px #cd2327; }
+  from {
+    box-shadow: 0 0 15px 15px rgba(255, 255, 255, 0.15), 0 0 5px 5px rgba(205, 35, 39, 0.75), 0 0 25px 25px transparent;
+  }
   
-  to { box-shadow: 0 0 5px transparent, 0 0 10px transparent, 0 0 15px transparent, 0 0 20px #cd2327, 0 0 35px #cd2327, 0 0 40px #cd2327, 0 0 50px #cd2327, 0 0 75px #cd2327; }
+  to {
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.15), 0 0 25px 25px rgba(205, 35, 39, 0.75), 0 0 10px 10px rgba(255, 255, 255, 0.15);
+  }
 }
