@@ -25,6 +25,17 @@
     </article>
   </section>
 
+  <section class="c-bar">
+    <article class="c-bar-stones c-bar-stones--black">
+      <div class="c-stone c-stone--black" ng-repeat="stone in stones | filter: {position: -1, player: 'black'}">
+      </div>
+    </article>
+    <article class="c-bar-stones c-bar-stones--white">
+      <div class="c-stone c-stone--white" ng-repeat="stone in stones | filter: {position: -1, player: 'white'}">
+      </div>
+    </article>
+  </section>
+
   <section class="c-box-container" ng-click="moveStone(25)">
     <article class="c-box c-box--black">
       <div class="c-stone c-stone--black" ng-repeat="stone in stones" ng-if="stone.player === 'black' && stone.position === 25"></div>
