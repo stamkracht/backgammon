@@ -8,4 +8,23 @@
   background: transparent;
   box-shadow: inset 0 0 10px 5px rgba($black, .25); 
 
+  .c-bar-stones {
+    position: absolute;
+    top: 0;
+    left: -250%;
+
+    &--black {
+      bottom: 50%;
+    }
+
+    &--white {
+      bottom: 40%;
+    }
+
+    .c-stone {
+      position: absolute;
+      width: 115px;
+      height: 95px;
+    }
+  }
 }
