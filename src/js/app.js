@@ -125,11 +125,11 @@ angular.module('sk.backgammon', [])
       },
     ];
 
-    $scope.moveStone = function (position) {
+    $scope.moveStone = function (position, player) {
+      var _stones = $scope.stones.filter(function (stone) {
+        return stone.position === position;
+      });
       if ( $scope.active_stone ) {
-        var _stones = $scope.stones.filter(function (stone) {
-          return stone.position === position;
-        });
         if ( _stones.length < 2 ) {
           $scope.active_stone.position = position;
           if ( _stones.length === 1 && _stones[0].player !== $scope.active_stone.player ) {
@@ -141,11 +141,14 @@ angular.module('sk.backgammon', [])
         $scope.active_stone.active = false;
         $scope.active_stone = undefined;
       } else {
-        angular.forEach($scope.stones, function (stone) {
-          if ( stone.position === position ) {
-            $scope.active_stone = stone;
+        if ( !!_stones.length ) {
+          if ( !!player ) {
+            _stones = _stones.filter(function (stone) {
+              return stone.player === player;
+            });
           }
-        });
+          $scope.active_stone = _stones[_stones.length-1];
+        }
       }
     };
   }]);
