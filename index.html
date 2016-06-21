@@ -27,12 +27,16 @@
 
   <section class="c-bar">
     <article class="c-bar-stones c-bar-stones--black">
-      <div class="c-stone c-stone--black" ng-repeat="stone in stones | filter: {position: -1, player: 'black'}">
-      </div>
+      <div class="c-stone c-stone--black" ng-repeat="stone in stones | filter: {position: -1, player: 'black'} as _stones track by $index"
+        ng-click="moveStone(-1)"
+        ng-class="{'state-active': active_stone === stone}"
+        ng-style="{'bottom': ($index * 2) + '%'}"></div>
     </article>
     <article class="c-bar-stones c-bar-stones--white">
-      <div class="c-stone c-stone--white" ng-repeat="stone in stones | filter: {position: -1, player: 'white'}">
-      </div>
+      <div class="c-stone c-stone--white" ng-repeat="stone in stones | filter: {position: -1, player: 'white'} as _stones track by $index"
+        ng-click="moveStone(-1)"
+        ng-class="{'state-active': active_stone === stone}"
+        ng-style="{'bottom': ($index * 2) + '%'}"></div>
     </article>
   </section>
 
