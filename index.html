@@ -17,7 +17,7 @@
         ng-repeat="point in 'points' track by $index">
         <span class="c-point__shape"></span>
         <div class="c-stone {{ active_stone === stone ? 'state-active' : ''}}"
-          ng-repeat="stone in stones | filter:{position: $index + ($parent.$index * 6) + 1} as _stones track by $index"
+          ng-repeat="stone in stones | filter:{position: $index + ($parent.$index * 6) + 1}:true as _stones track by $index"
           ng-if="stone.position === $parent.$index  + ($parent.$parent.$index * 6) + 1"
           ng-class="stone.player === 'white' ? 'c-stone--white' : 'c-stone--black'"
           ng-style="$parent.$parent.$parent.$index < 2 && {'top': ($index * ( (_stones.length >= 5) ? (60 / _stones.length) : 12) + 1) + '%'} || {'bottom': ($index * ( (_stones.length >= 5) ? (60 / _stones.length) :  12) + 2) + '%'}"></div>
